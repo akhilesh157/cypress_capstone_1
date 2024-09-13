@@ -25,3 +25,4 @@ import 'cypress-mailhog';
 /// <reference types="cypress" />
 
 /// <reference types="cypress-xpath" />
+require('cypress-xpath')
