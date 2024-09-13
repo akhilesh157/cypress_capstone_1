@@ -1,0 +1,27 @@
+// const { defineConfig } = require("cypress");
+// const getCompareSnapshotsPlugin = require('cypress-image-diff-js/plugin');
+
+
+// module.exports = defineConfig({
+//   e2e: {
+//     setupNodeEvents(on, config) {
+//       // implement node event listeners here 
+//       require('cypress-mochawesome-reporter/plugin')(on)
+//       return getCompareSnapshotsPlugin(on, config);
+
+//     },
+//     },
+//     reporter: 'cypress-mochawesome-reporter',
+//     reporterOptions: {
+//       reportDir: 'cypress/reports',
+//       overwrite: true,
+//       html: true
+//     },
+//     retries:2,
+//     pageLoadTimeout: 60000, // increase timeout to 120 seconds
+//     viewportWidth: 1036,
+//     viewportHeight: 960,
+//     video:true,
+//     screenshotOnRunFailure:true
+
+// })
