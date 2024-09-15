@@ -36,4 +36,4 @@ describe('User Login/Logout', () => {
       cy.get('.header-links > ul > :nth-child(1) > .account').should('be.visible');
       cy.get('.ico-logout').should('be.visible');
     });
-  });
+  })

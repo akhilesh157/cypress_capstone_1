@@ -9,4 +9,4 @@ describe('Product Search', () => {
       cy.get('form > .button-1').click();
       cy.get('.details').should('contain.text', 'Gift Card');
     });
-  });
+})

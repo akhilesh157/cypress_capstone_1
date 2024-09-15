@@ -1,5 +1,4 @@
 describe('E-commerce', () => {
-
   it('Homepage Navigation', () => {
     cy.visit('https://demowebshop.tricentis.com')
     cy.get('.header-logo > a').should('be.visible')

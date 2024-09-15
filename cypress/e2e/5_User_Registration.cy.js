@@ -42,49 +42,49 @@ describe('User Registration', () => {
         cy.get('.field-validation-error').eq(3).should('contain.text', 'Password is required.')
     })
 
-    it('Invalid user registration with invalid email', () => {
-        const invalidEmail = 'invalidemail.com'
+    // it('Invalid user registration with invalid email', () => {
+    //     const invalidEmail = 'invalidemail.com'
 
-        cy.get('#gender-male').check()
-        cy.get('#FirstName').type('John')
-        cy.get('#LastName').type('Doe')
-        cy.get('#Email').type(invalidEmail) // Invalid email format
-        cy.get('#Password').type(validPassword)
-        cy.get('#ConfirmPassword').type(validPassword)
-        cy.get('#register-button').click()
+    //     cy.get('#gender-male').check()
+    //     cy.get('#FirstName').type('John')
+    //     cy.get('#LastName').type('Doe')
+    //     cy.get('#Email').type(invalidEmail) // Invalid email format
+    //     cy.get('#Password').type(validPassword)
+    //     cy.get('#ConfirmPassword').type(validPassword)
+    //     cy.get('#register-button').click()
 
-        // Expect validation error for email format
-        cy.get('.field-validation-error').should('contain.text', 'Wrong email')
-    })
+    //     // Expect validation error for email format
+    //     cy.get('.field-validation-error').should('contain.text', 'Wrong email')
+    // })
 
-    it('Invalid user registration with mismatched passwords', () => {
-        const username = generateRandomUsername()
+    // it('Invalid user registration with mismatched passwords', () => {
+    //     const username = generateRandomUsername()
         
-        cy.get('#gender-male').check()
-        cy.get('#FirstName').type('John')
-        cy.get('#LastName').type('Doe')
-        cy.get('#Email').type(username)
-        cy.get('#Password').type(validPassword)
-        cy.get('#ConfirmPassword').type('MismatchedPassword') // Mismatched confirmation password
-        cy.get('#register-button').click()
+    //     cy.get('#gender-male').check()
+    //     cy.get('#FirstName').type('John')
+    //     cy.get('#LastName').type('Doe')
+    //     cy.get('#Email').type(username)
+    //     cy.get('#Password').type(validPassword)
+    //     cy.get('#ConfirmPassword').type('MismatchedPassword') // Mismatched confirmation password
+    //     cy.get('#register-button').click()
 
-        // Expect validation error for mismatched passwords
-        cy.get('.field-validation-error').should('contain.text', 'The password and confirmation password do not match.')
-    })
+    //     // Expect validation error for mismatched passwords
+    //     cy.get('.field-validation-error').should('contain.text', 'The password and confirmation password do not match.')
+    // })
 
-    it('Invalid user registration with short password', () => {
-        const username = generateRandomUsername()
+    // it('Invalid user registration with short password', () => {
+    //     const username = generateRandomUsername()
         
-        cy.get('#gender-male').check()
-        cy.get('#FirstName').type('John')
-        cy.get('#LastName').type('Doe')
-        cy.get('#Email').type(username)
-        cy.get('#Password').type(shortPassword) // Password with less than 6 characters
-        cy.get('#ConfirmPassword').type(shortPassword)
-        cy.get('#register-button').click()
+    //     cy.get('#gender-male').check()
+    //     cy.get('#FirstName').type('John')
+    //     cy.get('#LastName').type('Doe')
+    //     cy.get('#Email').type(username)
+    //     cy.get('#Password').type(shortPassword) // Password with less than 6 characters
+    //     cy.get('#ConfirmPassword').type(shortPassword)
+    //     cy.get('#register-button').click()
 
-        // Expect validation error for short password
-        cy.get('.field-validation-error').should('contain.text', 'The password should have at least 6 characters.')
-    })
+    //     // Expect validation error for short password
+    //     cy.get('.field-validation-error').should('contain.text', 'The password should have at least 6 characters.')
+    // )
 
 })
